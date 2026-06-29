@@ -62,6 +62,64 @@ export default function AboutPage() {
         </div>
       </div>
 
+      <div className="max-w-7xl mx-auto px-6 lg:px-12 pb-24 sm:pb-32">
+        <motion.div
+          initial={{ opacity: prefersReduced ? 1 : 0, y: prefersReduced ? 0 : 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: prefersReduced ? 0.01 : 0.6 }}
+          className="border-t border-gold/10 pt-16"
+        >
+          <h2 className="font-nav text-xs tracking-[4px] uppercase text-gold mb-10 text-center">
+            Meet the Founder
+          </h2>
+
+          <div className="flex flex-col md:flex-row items-center gap-10 md:gap-16">
+            <motion.div
+              initial={{ opacity: prefersReduced ? 1 : 0, scale: prefersReduced ? 1 : 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: prefersReduced ? 0.01 : 0.5 }}
+              className="relative w-40 h-40 sm:w-48 sm:h-48 flex-shrink-0"
+            >
+              <div className="relative w-full h-full rounded-full overflow-hidden ring-2 ring-gold/20">
+                <Image
+                  src="/logo.jpg"
+                  alt="Founder"
+                  fill
+                  className="object-cover"
+                  sizes="192px"
+                />
+              </div>
+              <div className="absolute -bottom-2 -right-2 w-10 h-10 bg-gold rounded-full flex items-center justify-center">
+                <svg className="w-5 h-5 text-midnight" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
+                </svg>
+              </div>
+            </motion.div>
+
+            <div className="text-center md:text-left space-y-4">
+              <h3 className="font-heading text-2xl sm:text-3xl italic text-cream">
+                Riya Patel
+              </h3>
+              <p className="font-nav text-xs tracking-[4px] uppercase text-gold/70">
+                Owner &amp; Head Pastry Chef
+              </p>
+              <p className="font-body text-base text-text-muted leading-relaxed max-w-lg">
+                A pastry enthusiast who traded a corporate career for her true passion — 
+                desserts. Riya trained at renowned patisseries before bringing her vision 
+                to Ankleshwar. Every recipe at Sweet Butterfly is crafted, tested, and 
+                perfected by her.
+              </p>
+              <p className="font-heading text-lg italic text-gold/60">
+                &ldquo;A great dessert is not just about taste — it&apos;s about the 
+                emotion it leaves behind.&rdquo;
+              </p>
+            </div>
+          </div>
+        </motion.div>
+      </div>
+
       <motion.div
         className="absolute bottom-8 right-8 w-20 h-20 opacity-10 pointer-events-none"
         animate={prefersReduced ? {} : {
