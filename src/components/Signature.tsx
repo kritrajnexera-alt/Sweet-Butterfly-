@@ -1,6 +1,7 @@
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
+import { ButterflyGold } from "./Butterfly";
 
 const menuItems = [
   { name: "Waffles & Crepes", price: "from ₹99" },
@@ -55,6 +56,21 @@ export default function Signature() {
           ))}
         </div>
       </div>
+
+      <motion.div
+        className="absolute top-1/2 right-10 w-32 h-24 -translate-y-1/2 opacity-10 pointer-events-none"
+        animate={prefersReduced ? {} : {
+          y: [0, -8, 0],
+          rotate: [0, 3, 0],
+        }}
+        transition={{
+          duration: 5,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+      >
+        <ButterflyGold className="w-full h-full text-gold" />
+      </motion.div>
 
       <div className="absolute top-1/2 right-0 w-64 h-64 -translate-y-1/2 opacity-[0.03] pointer-events-none">
         <div className="w-full h-full rounded-full bg-gold blur-3xl" />

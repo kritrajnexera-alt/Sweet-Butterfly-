@@ -1,6 +1,7 @@
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
+import Link from "next/link";
 import { ButterflyGold } from "./Butterfly";
 
 const titleText = "Where Every Dessert Tells A Story.";
@@ -13,9 +14,42 @@ export default function Hero() {
       id="hero"
       className="relative min-h-screen flex items-center bg-midnight overflow-hidden"
     >
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(212,175,55,0.04)_0%,_transparent_60%)]" />
+      <motion.div
+        className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(212,175,55,0.04)_0%,_transparent_60%)]"
+        animate={prefersReduced ? {} : {
+          scale: [1, 1.04, 1],
+        }}
+        transition={{
+          duration: 8,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+      />
 
-      <div className="absolute top-20 right-20 w-72 h-72 rounded-full bg-gold/3 blur-3xl" />
+      <motion.div
+        className="absolute top-20 right-20 w-72 h-72 rounded-full bg-gold/3 blur-3xl"
+        animate={prefersReduced ? {} : {
+          y: [0, -15, 0],
+        }}
+        transition={{
+          duration: 6,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+      />
+
+      <motion.div
+        className="absolute bottom-32 left-16 w-48 h-48 rounded-full bg-gold/2 blur-3xl"
+        animate={prefersReduced ? {} : {
+          y: [0, 10, 0],
+        }}
+        transition={{
+          duration: 7,
+          repeat: Infinity,
+          ease: "easeInOut",
+          delay: 1,
+        }}
+      />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 w-full">
         <div className="max-w-4xl">
@@ -45,15 +79,15 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 1.2 }}
             className="mt-8 sm:mt-12"
           >
-            <a
-              href="#signature"
-              className="inline-flex items-center gap-3 px-8 py-3.5 border border-gold/40 text-gold font-nav text-xs tracking-[4px] uppercase hover:bg-gold/10 hover:border-gold transition-all duration-400"
+            <Link
+              href="/#signature"
+              className="group inline-flex items-center gap-3 px-8 py-3.5 border border-gold/40 text-gold font-nav text-xs tracking-[4px] uppercase hover:bg-gold/10 hover:border-gold hover:shadow-[0_0_30px_-5px_rgba(212,175,55,0.2)] transition-all duration-400"
             >
               Explore our world
               <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">
                 →
               </span>
-            </a>
+            </Link>
           </motion.div>
         </div>
 
@@ -74,7 +108,19 @@ export default function Hero() {
           transition={{ duration: 1.5, delay: 2 }}
           className="absolute bottom-12 right-6 lg:right-12"
         >
-          <ButterflyGold className="w-20 h-16 sm:w-28 sm:h-22 text-gold opacity-20" />
+          <motion.div
+            animate={prefersReduced ? {} : {
+              y: [0, -6, 0],
+              rotate: [0, 2, 0],
+            }}
+            transition={{
+              duration: 4,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+          >
+            <ButterflyGold className="w-20 h-16 sm:w-28 sm:h-22 text-gold opacity-20 hover:opacity-40 transition-opacity duration-500" />
+          </motion.div>
         </motion.div>
       </div>
     </section>

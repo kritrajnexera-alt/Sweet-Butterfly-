@@ -6,7 +6,7 @@ import { ButterflySmall } from "./Butterfly";
 export default function Footer() {
   return (
     <footer className="bg-midnight-light border-t border-white/5 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 py-12">
+      <div className="max-w-7xl mx-auto px-6 lg:px-12 py-12 pb-20 md:pb-12">
         <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
           <Link href="/" className="flex items-center gap-3 group">
             <ButterflySmall className="w-6 h-5 text-gold group-hover:scale-110 transition-transform duration-300" />

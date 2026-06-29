@@ -1,11 +1,16 @@
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
+import { ButterflyGold } from "@/components/Butterfly";
+import TitleSetter from "@/components/TitleSetter";
 
 export default function AboutPage() {
   const prefersReduced = useReducedMotion();
   return (
-    <section className="relative bg-midnight-light overflow-hidden pt-28">
+    <>
+      <TitleSetter title="About" />
+      <section className="relative bg-midnight-light overflow-hidden pt-28">
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_20%_50%,_rgba(212,175,55,0.03)_0%,_transparent_50%)]" />
       <div className="max-w-7xl mx-auto px-6 lg:px-12 py-16 sm:py-24">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
           <motion.div
@@ -13,9 +18,19 @@ export default function AboutPage() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: prefersReduced ? 0.01 : 0.8, ease: [0.25, 0.1, 0.25, 1] }}
           >
-            <span className="font-heading text-[clamp(6rem,15vw,200px)] italic font-light leading-none text-gold block">
+            <motion.span
+              className="font-heading text-[clamp(6rem,15vw,200px)] italic font-light leading-none text-gold block"
+              animate={prefersReduced ? {} : {
+                scale: [1, 1.02, 1],
+              }}
+              transition={{
+                duration: 4,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+            >
               4.8
-            </span>
+            </motion.span>
             <span className="font-nav text-xs tracking-[4px] uppercase text-text-muted mt-2 block">
               ★ Ankleshwar&apos;s Highest Rated
             </span>
@@ -47,7 +62,23 @@ export default function AboutPage() {
         </div>
       </div>
 
+      <motion.div
+        className="absolute bottom-8 right-8 w-24 h-18 opacity-5 pointer-events-none"
+        animate={prefersReduced ? {} : {
+          y: [0, -6, 0],
+          rotate: [0, 2, 0],
+        }}
+        transition={{
+          duration: 5,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+      >
+        <ButterflyGold className="w-full h-full text-gold" />
+      </motion.div>
+
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-3xl h-px bg-gradient-to-r from-transparent via-gold/20 to-transparent" />
     </section>
+    </>
   );
 }

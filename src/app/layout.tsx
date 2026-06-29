@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import PageTransition from "@/components/PageTransition";
 
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
@@ -22,7 +23,10 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Sweet Butterfly | Ankleshwar's Finest Dessert Cafe",
+  title: {
+    default: "Sweet Butterfly | Ankleshwar's Finest Dessert Cafe",
+    template: "%s | Sweet Butterfly",
+  },
   description:
     "Ankleshwar's highest rated dessert cafe. Waffles, Crepes, Shakes & Custom Cakes. Rated 4.8/5.",
 };
@@ -46,7 +50,7 @@ export default function RootLayout({
         </a>
         <Navbar />
         <main id="main-content" className="flex-1">
-          {children}
+          <PageTransition>{children}</PageTransition>
         </main>
         <Footer />
         <WhatsAppButton />

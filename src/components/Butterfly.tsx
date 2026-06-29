@@ -9,34 +9,50 @@ export function ButterflyGold({ className = "" }: { className?: string }) {
       className={className}
     >
       <path
-        d="M100 80C100 80 60 45 30 50C0 55 5 80 5 80C5 80 0 105 30 110C60 115 100 80 100 80Z"
+        d="M100 85C100 85 55 40 25 48C-2 55 2 80 2 80C2 80 -2 105 25 112C55 120 100 85 100 85Z"
         fill="currentColor"
-        opacity="0.3"
+        opacity="0.25"
       />
       <path
-        d="M100 80C100 80 140 45 170 50C200 55 195 80 195 80C195 80 200 105 170 110C140 115 100 80 100 80Z"
+        d="M100 85C100 85 145 40 175 48C202 55 198 80 198 80C198 80 202 105 175 112C145 120 100 85 100 85Z"
         fill="currentColor"
-        opacity="0.3"
+        opacity="0.25"
       />
       <path
-        d="M100 80C100 80 80 120 85 140C90 160 100 155 100 155C100 155 110 160 115 140C120 120 100 80 100 80Z"
+        d="M100 85C100 85 78 125 83 145C88 162 100 158 100 158C100 158 112 162 117 145C122 125 100 85 100 85Z"
         fill="currentColor"
-        opacity="0.3"
+        opacity="0.2"
       />
       <path
-        d="M100 70C102 68 104 65 104 60C104 55 102 52 100 50C98 52 96 55 96 60C96 65 98 68 100 70Z"
+        d="M100 72C103 69 106 65 106 58C106 51 103 47 100 45C97 47 94 51 94 58C94 65 97 69 100 72Z"
         fill="currentColor"
-        opacity="0.5"
+        opacity="0.6"
+      />
+      <ellipse cx="88" cy="66" rx="3" ry="2" fill="currentColor" opacity="0.4" />
+      <ellipse cx="112" cy="66" rx="3" ry="2" fill="currentColor" opacity="0.4" />
+      <path
+        d="M100 85C100 85 68 58 42 62C20 65 15 80 15 85C15 90 20 105 42 108C68 112 100 85 100 85Z"
+        fill="currentColor"
+        opacity="0.1"
       />
       <path
-        d="M100 80C100 80 70 55 45 58C25 60 20 75 20 80C20 85 25 100 45 102C70 105 100 80 100 80Z"
+        d="M100 85C100 85 132 58 158 62C180 65 185 80 185 85C185 90 180 105 158 108C132 112 100 85 100 85Z"
         fill="currentColor"
+        opacity="0.1"
+      />
+      <path
+        d="M100 88C100 88 48 50 22 56C-1 62 2 82 2 82"
+        stroke="currentColor"
+        strokeWidth="0.5"
         opacity="0.15"
+        fill="none"
       />
       <path
-        d="M100 80C100 80 130 55 155 58C175 60 180 75 180 80C180 85 175 100 155 102C130 105 100 80 100 80Z"
-        fill="currentColor"
+        d="M100 88C100 88 152 50 178 56C201 62 198 82 198 82"
+        stroke="currentColor"
+        strokeWidth="0.5"
         opacity="0.15"
+        fill="none"
       />
     </svg>
   );
@@ -51,20 +67,22 @@ export function ButterflySmall({ className = "" }: { className?: string }) {
       className={className}
     >
       <path
-        d="M50 40C50 40 30 22 15 25C0 28 2 40 2 40C2 40 0 52 15 55C30 58 50 40 50 40Z"
+        d="M50 42C50 42 28 20 13 24C0 28 2 40 2 40C2 40 0 52 13 56C28 60 50 42 50 42Z"
         fill="currentColor"
-        opacity="0.4"
+        opacity="0.35"
       />
       <path
-        d="M50 40C50 40 70 22 85 25C100 28 98 40 98 40C98 40 100 52 85 55C70 58 50 40 50 40Z"
+        d="M50 42C50 42 72 20 87 24C100 28 98 40 98 40C98 40 100 52 87 56C72 60 50 42 50 42Z"
         fill="currentColor"
-        opacity="0.4"
+        opacity="0.35"
       />
       <path
-        d="M50 35C51 33 52 31 52 28C52 25 51 23 50 22C49 23 48 25 48 28C48 31 49 33 50 35Z"
+        d="M50 36C51 34 52 31 52 28C52 24 51 22 50 21C49 22 48 24 48 28C48 31 49 34 50 36Z"
         fill="currentColor"
-        opacity="0.6"
+        opacity="0.7"
       />
+      <ellipse cx="44" cy="34" rx="2" ry="1.5" fill="currentColor" opacity="0.4" />
+      <ellipse cx="56" cy="34" rx="2" ry="1.5" fill="currentColor" opacity="0.4" />
     </svg>
   );
 }
