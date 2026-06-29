@@ -20,7 +20,7 @@ interface MenuItem {
 const categoryImages: Record<CategoryKey, string> = {
   waffles: "https://images.unsplash.com/photo-1551024601-bec78aea704b?w=600&q=80",
   crepes: "https://images.unsplash.com/photo-1519676867240-f03562e64548?w=600&q=80",
-  shakes: "https://images.unsplash.com/photo-1570197785657-d9fe21a8e8e8?w=600&q=80",
+  shakes: "https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=600&q=80",
   icecream: "https://images.unsplash.com/photo-1501443762994-82bd5dace89a?w=600&q=80",
   cakes: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=600&q=80",
   coffee: "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=600&q=80",
@@ -53,12 +53,12 @@ const menuData: Record<CategoryKey, { label: string; icon: React.ReactNode; item
     label: "Shakes",
     icon: <IconShake className="w-6 h-6" />,
     items: [
-      { name: "Classic Oreo Shake", description: "Creamy vanilla shake blended with crushed Oreos", price: "₹149", tag: "Bestseller", image: "https://images.unsplash.com/photo-1570197785657-d9fe21a8e8e8?w=200&q=80" },
-      { name: "Belgian Chocolate Shake", description: "Rich dark chocolate shake topped with whipped cream", price: "₹179", image: "https://images.unsplash.com/photo-1570197785657-d9fe21a8e8e8?w=200&q=80" },
-      { name: "Mango Tango Shake", description: "Fresh alphonso mango pulp blended with milk & cream", price: "₹199", tag: "Seasonal", image: "https://images.unsplash.com/photo-1570197785657-d9fe21a8e8e8?w=200&q=80" },
-      { name: "Salted Caramel Shake", description: "Buttery caramel with sea salt & vanilla bean ice cream", price: "₹189", image: "https://images.unsplash.com/photo-1570197785657-d9fe21a8e8e8?w=200&q=80" },
-      { name: "Red Velvet Shake", description: "Red velvet cake crumble blended into a creamy milkshake", price: "₹219", tag: "Popular", image: "https://images.unsplash.com/photo-1570197785657-d9fe21a8e8e8?w=200&q=80" },
-      { name: "Tropical Coconut Shake", description: "Coconut milk, pineapple & a hint of vanilla", price: "₹199", image: "https://images.unsplash.com/photo-1570197785657-d9fe21a8e8e8?w=200&q=80" },
+      { name: "Classic Oreo Shake", description: "Creamy vanilla shake blended with crushed Oreos", price: "₹149", tag: "Bestseller", image: "https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=200&q=80" },
+      { name: "Belgian Chocolate Shake", description: "Rich dark chocolate shake topped with whipped cream", price: "₹179", image: "https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=200&q=80" },
+      { name: "Mango Tango Shake", description: "Fresh alphonso mango pulp blended with milk & cream", price: "₹199", tag: "Seasonal", image: "https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=200&q=80" },
+      { name: "Salted Caramel Shake", description: "Buttery caramel with sea salt & vanilla bean ice cream", price: "₹189", image: "https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=200&q=80" },
+      { name: "Red Velvet Shake", description: "Red velvet cake crumble blended into a creamy milkshake", price: "₹219", tag: "Popular", image: "https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=200&q=80" },
+      { name: "Tropical Coconut Shake", description: "Coconut milk, pineapple & a hint of vanilla", price: "₹199", image: "https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=200&q=80" },
     ],
   },
   icecream: {

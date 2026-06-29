@@ -10,7 +10,7 @@ const titleText = "Where Every Dessert Tells A Story.";
 const floatingFood = [
   { src: "https://images.unsplash.com/photo-1551024601-bec78aea704b?w=300&q=80", alt: "Dessert", x: "75%", y: "20%", delay: 0, size: 120 },
   { src: "https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=300&q=80", alt: "Cake", x: "15%", y: "55%", delay: 1.2, size: 100 },
-  { src: "https://images.unsplash.com/photo-1570197785657-d9fe21a8e8e8?w=300&q=80", alt: "Shake", x: "82%", y: "65%", delay: 2.4, size: 90 },
+  { src: "https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=300&q=80", alt: "Shake", x: "82%", y: "65%", delay: 2.4, size: 90 },
   { src: "https://images.unsplash.com/photo-1505252585461-04db1eb84625?w=300&q=80", alt: "Waffle", x: "10%", y: "18%", delay: 0.6, size: 110 },
 ];
 

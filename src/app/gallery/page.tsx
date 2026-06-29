@@ -10,12 +10,12 @@ const images = [
   { src: "https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=600&q=80", alt: "Cake" },
   { src: "https://images.unsplash.com/photo-1488477181946-6428a0291777?w=600&q=80", alt: "Coffee" },
   { src: "https://images.unsplash.com/photo-1505252585461-04db1eb84625?w=600&q=80", alt: "Waffles" },
-  { src: "https://images.unsplash.com/photo-1570197785657-d9fe21a8e8e8?w=600&q=80", alt: "Ice Cream" },
+  { src: "https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=600&q=80", alt: "Milkshake" },
   { src: "https://images.unsplash.com/photo-1558636508-e0db3814bd1d?w=600&q=80", alt: "Shakes" },
   { src: "https://images.unsplash.com/photo-1453614512568-c4024d13c247?w=600&q=80", alt: "Crepes" },
   { src: "https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?w=600&q=80", alt: "Berries" },
-  { src: "https://images.unsplash.com/photo-1511919886926-f8f5f3fc3cd3?w=600&q=80", alt: "Macarons" },
-  { src: "https://images.unsplash.com/photo-1587314168485-3236d671bf44?w=600&q=80", alt: "Donuts" },
+  { src: "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=600&q=80", alt: "Macarons" },
+  { src: "https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=600&q=80", alt: "Donuts" },
 ];
 
 export default function GalleryPage() {
