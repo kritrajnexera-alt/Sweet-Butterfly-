@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+@theme {
+  --color-midnight: #0A1A0F;
+  --color-midnight-light: #111F14;
+  --color-gold: #D4AF37;
+  --color-gold-dark: #B8942E;
+  --color-cream: #F5EDD6;
+  --color-text: #F0EBE0;
+  --color-text-muted: #A09888;
+  --font-heading: "Cormorant Garamond", serif;
+  --font-nav: "Space Grotesk", sans-serif;
+  --font-body: "Inter", sans-serif;
+}
+
+body {
+  background: var(--color-midnight);
+  color: var(--color-text);
+  font-family: var(--font-body);
+}
+
+::selection {
+  background: #D4AF37;
+  color: #0A1A0F;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.text-pretty {
+  text-wrap: pretty;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0A1A0F;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D4AF37;
+  border-radius: 3px;
+}
+
+*:focus-visible {
+  outline: 2px solid #D4AF37;
+  outline-offset: 2px;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid #D4AF37;
+  outline-offset: 2px;
+}
