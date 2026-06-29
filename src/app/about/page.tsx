@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
-import { ButterflyGold } from "@/components/Butterfly";
+import Image from "next/image";
 import TitleSetter from "@/components/TitleSetter";
 
 export default function AboutPage() {
@@ -63,10 +63,10 @@ export default function AboutPage() {
       </div>
 
       <motion.div
-        className="absolute bottom-8 right-8 w-24 h-18 opacity-5 pointer-events-none"
+        className="absolute bottom-8 right-8 w-20 h-20 opacity-10 pointer-events-none"
         animate={prefersReduced ? {} : {
           y: [0, -6, 0],
-          rotate: [0, 2, 0],
+          rotate: [0, 3, -3, 0],
         }}
         transition={{
           duration: 5,
@@ -74,7 +74,15 @@ export default function AboutPage() {
           ease: "easeInOut",
         }}
       >
-        <ButterflyGold className="w-full h-full text-gold" />
+        <div className="relative w-full h-full rounded-full overflow-hidden ring-1 ring-gold/10">
+          <Image
+            src="/logo.jpg"
+            alt=""
+            fill
+            className="object-cover"
+            sizes="80px"
+          />
+        </div>
       </motion.div>
 
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-3xl h-px bg-gradient-to-r from-transparent via-gold/20 to-transparent" />

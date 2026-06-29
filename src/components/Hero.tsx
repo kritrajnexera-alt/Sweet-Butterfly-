@@ -2,7 +2,7 @@
 
 import { motion, useReducedMotion } from "framer-motion";
 import Link from "next/link";
-import { ButterflyGold } from "./Butterfly";
+import Image from "next/image";
 
 const titleText = "Where Every Dessert Tells A Story.";
 
@@ -111,15 +111,22 @@ export default function Hero() {
           <motion.div
             animate={prefersReduced ? {} : {
               y: [0, -6, 0],
-              rotate: [0, 2, 0],
+              rotate: [0, 3, -3, 0],
             }}
             transition={{
-              duration: 4,
+              duration: 5,
               repeat: Infinity,
               ease: "easeInOut",
             }}
+            className="relative w-20 h-20 sm:w-28 sm:h-28 opacity-20 hover:opacity-40 transition-opacity duration-500"
           >
-            <ButterflyGold className="w-20 h-16 sm:w-28 sm:h-22 text-gold opacity-20 hover:opacity-40 transition-opacity duration-500" />
+            <Image
+              src="/logo.jpg"
+              alt=""
+              fill
+              className="object-cover rounded-full"
+              sizes="112px"
+            />
           </motion.div>
         </motion.div>
       </div>

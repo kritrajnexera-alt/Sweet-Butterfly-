@@ -29,6 +29,10 @@ export const metadata: Metadata = {
   },
   description:
     "Ankleshwar's highest rated dessert cafe. Waffles, Crepes, Shakes & Custom Cakes. Rated 4.8/5.",
+  icons: {
+    icon: "/logo.jpg",
+    apple: "/logo.jpg",
+  },
 };
 
 export default function RootLayout({

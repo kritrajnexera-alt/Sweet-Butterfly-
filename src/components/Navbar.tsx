@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { ButterflySmall } from "./Butterfly";
+import Image from "next/image";
 
 const navLinks = [
   { label: "Home", href: "/" },
@@ -47,7 +47,19 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="flex items-center justify-between h-20">
           <Link href="/" className="flex items-center gap-3 group">
-            <ButterflySmall className="w-8 h-6 text-gold group-hover:scale-110 transition-transform duration-300" />
+            <motion.div
+              whileHover={{ scale: 1.08, rotate: [0, -3, 3, 0] }}
+              transition={{ duration: 0.4 }}
+              className="relative w-10 h-10 sm:w-11 sm:h-11 rounded-full overflow-hidden ring-1 ring-gold/30 group-hover:ring-gold/60 transition-all duration-300"
+            >
+              <Image
+                src="/logo.jpg"
+                alt="Sweet Butterfly Logo"
+                fill
+                className="object-cover"
+                sizes="44px"
+              />
+            </motion.div>
             <span className="font-heading text-xl sm:text-2xl italic text-cream tracking-wide">
               Sweet Butterfly
             </span>
